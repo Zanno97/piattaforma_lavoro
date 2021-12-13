@@ -2,11 +2,10 @@
 
 namespace App\Models;
 
-use Carbon\Traits\Modifiers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jobs extends Model
+class Job extends Model
 {
     use HasFactory;
 }

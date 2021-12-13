@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\JobsController;
+use App\Http\Controllers\JobController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/jobs', [JobsController::class, 'list']);
-Route::get('/jobs/{id}', [JobsController::class, 'detail']);
-Route::post('/jobs', [JobsController::class, 'create']);
-Route::get('/jobs/{id}/edit', [JobsController::class, 'edit']);
-Route::put('/jobs/{id}', [JobsController::class, 'update']);
-Route::delete('/jobs/{id}', [JobsController::class, 'delete']);
+Route::get('/jobs', [JobController::class, 'list']);
+Route::get('/jobs/{id}', [JobController::class, 'detail']);
+Route::post('/jobs', [JobController::class, 'create']);
+Route::get('/jobs/{id}/edit', [JobController::class, 'edit']);
+Route::put('/jobs/{id}', [JobController::class, 'update']);
+Route::delete('/jobs/{id}', [JobController::class, 'delete']);

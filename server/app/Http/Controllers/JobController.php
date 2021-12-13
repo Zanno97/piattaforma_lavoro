@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jobs;
+use App\Models\Job;
 use Illuminate\Http\Request;
 
-class JobsController extends Controller
+class JobController extends Controller
 {
     public function list(){
-        return Jobs::all();
+        return Job::all();
     }
 
     public function detail($id){
-        return Jobs::find($id);
+        return Job::find($id);
     }
 
     public function create(Request $req){
         $todoData = json_decode($req -> getContent());
 
-        $todo = new Jobs();
+        $todo = new Job();
         $todo->task = $todoData->task;
         $todo->save();
     }
@@ -26,12 +26,12 @@ class JobsController extends Controller
     public function edit(Request $req){
         $todoData = json_decode($req -> getContent());
 
-        $todo = new Jobs();
+        $todo = new Job();
         $todo->task = $todoData->task;
         $todo->save();
     }
 
     public function delete($id){
-        return Jobs::destroy($id);
+        return Job::destroy($id);
     }
 }
