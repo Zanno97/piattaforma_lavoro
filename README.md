@@ -1,4 +1,5 @@
 # piattaforma_lavoro
+~ Nome database piattaforma_lavoro
 
 ~ To being able to start the client server first go to the directory and type: *npm install*
 
