@@ -16,19 +16,16 @@ class JobController extends Controller
     }
 
     public function create(Request $req){
-        $todoData = json_decode($req -> getContent());
+        $jobData = json_decode($req -> getContent());
 
-        $todo = new Job();
-        $todo->task = $todoData->task;
-        $todo->save();
-    }
-
-    public function edit(Request $req){
-        $todoData = json_decode($req -> getContent());
-
-        $todo = new Job();
-        $todo->task = $todoData->task;
-        $todo->save();
+        $job = new Job();
+        $job->language = $jobData->language;
+        $job->agency = $jobData->agency;
+        $job->ral = $jobData->ral;
+        $job->experience = $jobData->experience;
+        $job->location = $jobData->location;
+        $job->description = $jobData->description;
+        $job->save();
     }
 
     public function delete($id){
